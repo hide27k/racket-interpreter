@@ -26,13 +26,13 @@ starting from the front, so that one variable can shadow another. -}
 -- add to the current environment. It tailer-recursively
 -- keeps track of new environment defined by "define".
 read_eval_print_loop env = do
-    putStr "Octopus> "
+    putStr ">>> "
     n <- getLine
     if n == ""
         then do exitFailure
         else if check_define (parse n) == True
            then read_eval_print_loop (make_env (parse n) env)
-           else putStrLn ("result: " ++ (octoshow $ eval (parse n) env))
+           else putStrLn ((octoshow $ eval (parse n) env))
     read_eval_print_loop env
 
 -- This is main function ran by "runHaskell OctopusInterpreter.hs"
