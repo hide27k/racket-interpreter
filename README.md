@@ -36,3 +36,13 @@ $ runhaskell OctopusInterpreter.hs
 ```
 
 3. You can exit by just typing return.
+
+## In case you edit parser
+
+1. Edit OctoParser.y
+
+2. Generate Haskell lexer file by using below command.
+
+```
+$ Happy OctoParser.y
+```
