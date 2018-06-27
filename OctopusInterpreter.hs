@@ -7,6 +7,7 @@ import Data.Char
 import Data.Maybe
 import Test.HUnit
 import System.Exit
+
 {- The heart of the interpreter is the eval function, which takes an
 OctoValue and evaluates it in the given environment.  As in Racket,
 expressions are represented as lists.  The eval function is defined by
@@ -178,7 +179,6 @@ primitives = [ ("+",octoplus), ("-", octominus), ("*", octotimes), ("cons", octo
 getint (OctoInt i) = i
 
 -- helper function for the stringappend function. It takes OctoString and transrates it to String.
--- (Question 13)
 getString (OctoString i) = i
 
 -- The octoplus function takes a list of OctoInts and adds them.

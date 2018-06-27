@@ -80,7 +80,7 @@ lexer ('\"':cs) =  TokenString (get_string cs "") : lexer (get_strings cs)
 lexNum cs = TokenInt (read num) : lexer rest
        where (num,rest) = span isDigit cs
 
--- This function takes the expression after ';' and transrates it to "".
+-- This function takes the expression after ';' and translate it to "".
 -- However, if it finds '\n' returns the expression after '\n' because
 -- the expression still has the argument that should be evaluated.
 munch_comment str =
