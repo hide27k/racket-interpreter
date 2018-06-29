@@ -357,7 +357,7 @@ complicated_comment_test = "  ; this is a comment on its own line \n \
 \  4  )  \n      \
 \ ; and a final comment \n"
 
--- For Question 16
+
 -- This function is for test "define" and REPL. This function takes a list that contains
 -- the expression the user supporse to type in a console and the current environment.
 -- If it hits the expression that contains "define", it makes the new environment and
